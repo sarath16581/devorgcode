@@ -1,0 +1,13 @@
+<apex:page standardController="Contract" >
+    <apex:form >
+    <apex:pageBlock >
+    <apex:pageBlockSection >
+    <apex:outputLabel >Subject</apex:outputLabel>
+    <apex:inputText />
+    <apex:outputLabel >Notes:</apex:outputLabel>
+    <apex:inputText />
+    <apex:commandButton value="Save Notes"/>
+    </apex:pageBlockSection>
+    </apex:pageBlock>
+    </apex:form>
+</apex:page>

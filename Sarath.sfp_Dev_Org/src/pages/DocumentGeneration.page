@@ -1,0 +1,396 @@
+<apex:page standardController="Opportunity" extensions="DocumentGenerationController" showHeader="false" sidebar="false">
+    <apex:slds />
+    <apex:includeLightning />
+    <script>
+        setTimeout(function(){ document.getElementById('spinner').className += ' slds-hide' }, 3000);
+    </script>
+    <apex:form >
+    
+        <!-- SPINNER -->
+                <div id="spinner" class="slds-spinner_container slds-is-relative" >
+                    <div role="status" class="slds-spinner slds-spinner--large slds-spinner--brand">
+                        <div class="slds-spinner__dot-a"></div>
+                        <div class="slds-spinner__dot-b"></div>
+                    </div>
+                </div>
+        <!-- / SPINNER -->  
+        <!-- Displays page messages -->
+        <apex:pagemessages id="msg" escape="false" />
+        <apex:image url="{!$Resource.difc}" width="1500" height="auto"/>
+        <center> <p style="font-size:30px; color:black;">
+        In-Principle Application Form
+        </p> </center>
+        <!-- Section one starts -->
+        <!-- <div class="slds-section-title--divider"><strong>Customer Details</strong></div> -->
+        <div class="slds-section slds-is-open">
+            <h3 class="slds-section__title">
+                <button aria-controls="expando-unique-id" aria-expanded="true" class="slds-button slds-section__title-action">
+                    <svg class="slds-section__title-action-icon slds-button__icon slds-button__icon_left" aria-hidden="true">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#switch" />
+                    </svg>
+                    <span class="slds-truncate" title="Section Title">Customer Details</span>
+                </button>
+            </h3>
+            <fieldset class="slds-form--compound">
+                <div class="slds-show slds-form-element_group">
+                    <div class="slds-form-element__row">
+                        <!-- code for first column starts-->
+                        <div class="slds-form-element__row slds-p-horizontal--x-large slds-medium-size--1-of-3">
+                            <div class="slds-form-element slds-size--1-of-1  slds-col--padded " style="width:250px;">
+                                <!-- code for field starts -->
+                                <label class="slds-form-element__label lbl-ip-space">
+                                    <strong>
+                                        Account Number
+                                    </strong>
+                                </label>
+                                <div class="slds-form-element__control">
+                                    <apex:outputField value="{!doc.Account_Number__c}" id="cusaccnum" /> 
+                                </div>
+                                <!-- code for field ends -->
+                                
+                                <!-- code for field starts -->
+                                <label class="slds-form-element__label lbl-ip-space">
+                                    <strong>
+                                        Contact Name
+                                    </strong>
+                                </label>
+                                <div class="slds-form-element__control">
+                                    <apex:inputField value="{!doc.Con_Name__c}" styleclass="slds-input" /> 
+                                </div>
+                                <!-- code for field ends -->
+                                
+                                <!-- code for field 2 starts -->
+                                <label class="slds-form-element__label lbl-ip-space">
+                                    <strong>
+                                        Contact Fax
+                                    </strong>
+                                </label>
+                                <div class="slds-form-element__control">
+                                    <apex:inputField value="{!doc.Customer_Fax__c}" styleclass="slds-input" html-placeholder="Fax #"  /> 
+                                </div>
+                                <!-- code for field 2 ends -->
+                                
+                                
+            
+                            </div>
+                        </div>
+                        <!-- code for first column ends-->
+                        
+                        <!-- code for second column starts-->
+                        <div class="slds-form-element__row slds-p-horizontal--x-large slds-medium-size--1-of-3">
+                            <div class="slds-form-element slds-size--1-of-1  slds-col--padded " style="width:250px;">
+                                <!-- code for field 1 starts -->
+                                <label class="slds-form-element__label lbl-ip-space">
+                                    <strong>
+                                        Opportunity Name
+                                    </strong>
+                                </label>
+                                <div class="slds-form-element__control">
+                                    <apex:outputText value="{!oppName}" id="cusoppname" /> 
+                                </div>
+                                <!-- code for field 1 ends -->
+                                
+                                 <!-- code for field starts -->
+                                <label class="slds-form-element__label lbl-ip-space">
+                                    <strong>
+                                        Contact Phone
+                                    </strong>
+                                </label>
+                                <div class="slds-form-element__control">
+                                    <apex:inputField value="{!doc.Customer_Phone__c}" id="cusPhone"  styleclass="slds-input" html-placeholder="Phone #"  /> 
+                                </div>
+                                <!-- code for field ends -->
+                                
+                                
+                                
+                                <!-- code for field starts -->
+                                <label class="slds-form-element__label lbl-ip-space">
+                                    <strong>
+                                        Rating Available
+                                    </strong>
+                                </label>
+                                <div class="slds-form-element__control">
+                                    <apex:inputField value="{!doc.Rating_Available__c}" id="cusRating" /> 
+                                </div>
+                                <!-- code for field ends -->
+                                
+                                
+                            </div>
+                        </div>
+                        <!-- code for second column ends-->
+                        
+                        <!-- code for third column starts-->
+                        <div class="slds-form-element__row slds-p-horizontal--x-large slds-medium-size--1-of-3">
+                            <div class="slds-form-element slds-size--1-of-1  slds-col--padded " style="width:250px;"> 
+                                <!-- code for field starts -->
+                                <label class="slds-form-element__label lbl-ip-space">
+                                    <strong>
+                                        Customer Name
+                                    </strong>
+                                </label>
+                                <div class="slds-form-element__control">
+                                    <apex:inputField value="{!doc.Customer_Name__c}" id="cusName"  styleclass="slds-input" html-placeholder="Name"  /> 
+                                </div>
+                                <!-- code for field ends -->
+                                
+                                <!-- code for field 1 starts -->
+                                <label class="slds-form-element__label lbl-ip-space">
+                                    <strong>
+                                        Contact Email
+                                    </strong>
+                                </label>
+                                <div class="slds-form-element__control">
+                                    <apex:inputField value="{!doc.Customer_Email__c}" id="cusEmail"  styleclass="slds-input" html-placeholder="Email"  /> 
+                                </div>
+                                <!-- code for field 1 ends -->
+                                
+                                
+                                
+                                <!-- code for field 3 starts -->
+                                <label class="slds-form-element__label lbl-ip-space">
+                                    <strong>
+                                        Rating
+                                    </strong>
+                                </label>
+                                <div class="slds-form-element__control">
+                                    <apex:inputField value="{!doc.Rating__c}" id="cusRatingPick"  styleclass="slds-input" /> 
+                                </div>
+                                <!-- code for field 3 ends -->                           
+                            </div>
+                        </div>
+                        <!-- code for third column ends-->
+                    </div>
+                </div>
+            </fieldset>
+        </div>
+        <!-- Section one ends -->
+        <!-- Section two starts -->
+        <!-- <div class="slds-section-title--divider"><strong>Generic Details</strong></div> -->
+        <div class="slds-section slds-is-open">
+            <h3 class="slds-section__title">
+                <button aria-controls="expando-unique-id" aria-expanded="true" class="slds-button slds-section__title-action">
+                    <svg class="slds-section__title-action-icon slds-button__icon slds-button__icon_left" aria-hidden="true">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#switch" />
+                    </svg>
+                    <span class="slds-truncate" title="Section Title">Generic Details</span>
+                </button>
+            </h3>
+            <fieldset class="slds-form--compound">
+                <div class="slds-show slds-form-element_group">
+                    <div class="slds-form-element__row">
+                        <!-- code for first column starts-->
+                        <div class="slds-form-element__row slds-p-horizontal--x-large slds-medium-size--1-of-3">
+                            <div class="slds-form-element slds-size--1-of-1  slds-col--padded " style="width:250px;">
+                                <!-- code for field starts -->
+                                <label class="slds-form-element__label lbl-ip-space">
+                                    <strong>
+                                        Entity Name
+                                    </strong>
+                                </label>
+                                <div class="slds-form-element__control">
+                                    <apex:inputField value="{!doc.Entity_Name__c}" styleclass="slds-input" html-placeholder="Enter Text"  /> 
+                                </div>
+                                <!-- code for field ends -->
+                                <!-- code for field starts -->
+                                <label class="slds-form-element__label lbl-ip-space">
+                                    <strong>
+                                        License Number
+                                    </strong>
+                                </label>
+                                <div class="slds-form-element__control">
+                                    <apex:inputField value="{!doc.License_Number__c}" styleclass="slds-input" html-placeholder="Enter Text"  /> 
+                                </div>
+                                <!-- code for field ends -->
+                                <!-- code for field starts -->
+                                <label class="slds-form-element__label lbl-ip-space">
+                                    <strong>
+                                        Business Activity
+                                    </strong>
+                                </label>
+                                <div class="slds-form-element__control">
+                                    <apex:inputField value="{!doc.Business_Activity__c}"  styleclass="slds-input" html-placeholder="Enter Text"  /> 
+                                </div>
+                                <!-- code for field ends -->
+                                <!-- code for field starts -->
+                                <label class="slds-form-element__label lbl-ip-space">
+                                    <strong>
+                                        Address
+                                    </strong>
+                                </label>
+                                <div class="slds-form-element__control">
+                                    <apex:inputField value="{!doc.Address__c}" styleclass="slds-input" html-placeholder="Enter Text"  /> 
+                                </div>
+                                <!-- code for field ends -->
+                                <!-- code for field starts -->
+                                <label class="slds-form-element__label lbl-ip-space">
+                                    <strong>
+                                        Portal User First Name
+                                    </strong>
+                                </label>
+                                <div class="slds-form-element__control">
+                                    <apex:inputField value="{!doc.Portal_User_First_Name__c}" styleclass="slds-input" html-placeholder="Enter Text"  /> 
+                                </div>
+                                <!-- code for field ends -->
+                                <!-- code for field starts -->
+                                <label class="slds-form-element__label lbl-ip-space">
+                                    <strong>
+                                        Portal User Phone No
+                                    </strong>
+                                </label>
+                                <div class="slds-form-element__control">
+                                    <apex:inputField value="{!doc.Portal_User_Phone_No__c}" styleclass="slds-input" html-placeholder="Enter Text"  /> 
+                                </div>
+                                <!-- code for field ends -->
+                            </div>
+                        </div>
+                        <!-- code for first column ends-->
+                        
+                        <!-- code for second column starts-->
+                        <div class="slds-form-element__row slds-p-horizontal--x-large slds-medium-size--1-of-3">
+                            <div class="slds-form-element slds-size--1-of-1  slds-col--padded " style="width:250px;">
+                                <!-- code for field starts -->
+                                <label class="slds-form-element__label lbl-ip-space">
+                                    <strong>
+                                        Firm Type
+                                    </strong>
+                                </label>
+                                <div class="slds-form-element__control">
+                                    <apex:inputField value="{!doc.Firm_Type__c}" styleclass="slds-input" html-placeholder="Enter Text"  /> 
+                                </div>
+                                <!-- code for field ends -->
+                                <!-- code for field starts -->
+                                <label class="slds-form-element__label lbl-ip-space">
+                                    <strong>
+                                        Trading Name
+                                    </strong>
+                                </label>
+                                <div class="slds-form-element__control">
+                                    <apex:inputField value="{!doc.Trading_Name__c}" styleclass="slds-input" html-placeholder="Enter Text"  /> 
+                                </div>
+                                <!-- code for field ends -->
+                                <!-- code for field starts -->
+                                <label class="slds-form-element__label lbl-ip-space">
+                                    <strong>
+                                        Entity type
+                                    </strong>
+                                </label>
+                                <div class="slds-form-element__control">
+                                    <apex:inputField value="{!doc.Entity_type__c}" styleclass="slds-input" html-placeholder="Enter Text"  /> 
+                                </div>
+                                <!-- code for field ends -->
+                                <!-- code for field starts -->
+                                <label class="slds-form-element__label lbl-ip-space">
+                                    <strong>
+                                        General Partner
+                                    </strong>
+                                </label>
+                                <div class="slds-form-element__control">
+                                    <apex:inputField value="{!doc.General_Partner__c}" styleclass="slds-input" html-placeholder="Enter Text"  /> 
+                                </div>
+                                <!-- code for field ends -->
+                                <!-- code for field starts -->
+                                <label class="slds-form-element__label lbl-ip-space">
+                                    <strong>
+                                        Portal User Last Name
+                                    </strong>
+                                </label>
+                                <div class="slds-form-element__control">
+                                    <apex:inputField value="{!doc.Portal_User_Last_Name__c}" styleclass="slds-input" html-placeholder="Enter Text"  /> 
+                                </div>
+                                <!-- code for field ends -->
+                            </div>
+                        </div>
+                        <!-- code for second column ends-->
+                        
+                        <!-- code for second column starts-->
+                        <div class="slds-form-element__row slds-p-horizontal--x-large slds-medium-size--1-of-3">
+                            <div class="slds-form-element slds-size--1-of-1  slds-col--padded " style="width:250px;">
+                                <!-- code for field starts -->
+                                <label class="slds-form-element__label lbl-ip-space">
+                                    <strong>
+                                        Current Employees
+                                    </strong>
+                                </label>
+                                <div class="slds-form-element__control">
+                                    <apex:inputField value="{!doc.Current_Employees__c}" styleclass="slds-input" html-placeholder="Enter Text"  /> 
+                                </div>
+                                <!-- code for field ends -->
+                                <!-- code for field starts -->
+                                <label class="slds-form-element__label lbl-ip-space">
+                                    <strong>
+                                        Limited Partner
+                                    </strong>
+                                </label>
+                                <div class="slds-form-element__control">
+                                    <apex:inputField value="{!doc.Limited_Partner__c}" styleclass="slds-input" html-placeholder="Enter Text"  /> 
+                                </div>
+                                <!-- code for field ends -->
+                                <!-- code for field starts -->
+                                <label class="slds-form-element__label lbl-ip-space">
+                                    <strong>
+                                        Ultimate beneficial owner
+                                    </strong>
+                                </label>
+                                <div class="slds-form-element__control">
+                                    <apex:inputField value="{!doc.Ultimate_beneficial_owner__c}" styleclass="slds-input" html-placeholder="Enter Text"  /> 
+                                </div>
+                                <!-- code for field ends -->
+                                <!-- code for field starts -->
+                                <label class="slds-form-element__label lbl-ip-space">
+                                    <strong>
+                                        Authorised Signatory Name
+                                    </strong>
+                                </label>
+                                <div class="slds-form-element__control">
+                                    <apex:inputField value="{!doc.Authorised_Signatory_Name__c}" styleclass="slds-input" html-placeholder="Enter Text"  /> 
+                                </div>
+                                <!-- code for field ends -->
+                                <!-- code for field starts -->
+                                <label class="slds-form-element__label lbl-ip-space">
+                                    <strong>
+                                        Portal User Email
+                                    </strong>
+                                </label>
+                                <div class="slds-form-element__control">
+                                    <apex:inputField value="{!doc.Portal_User_Email__c}" styleclass="slds-input" html-placeholder="Enter Text"  /> 
+                                </div>
+                                <!-- code for field ends -->
+                            </div>
+                        </div>
+                        <!-- code for second column ends-->
+                    </div>
+                </div>
+            </fieldset>
+        </div>
+        </apex:form>
+        <!-- Section two ends -->
+        <apex:form >
+            <div class="slds-section slds-is-open">
+                <h3 class="slds-section__title">
+                    <button aria-controls="expando-unique-id" aria-expanded="true" class="slds-button slds-section__title-action">
+                        <svg class="slds-section__title-action-icon slds-button__icon slds-button__icon_left" aria-hidden="true">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#switch" />
+                        </svg>
+                        <span class="slds-truncate" title="Section Title">Upload Required Documents</span>
+                    </button>
+                </h3>
+            <!-- <p style="font-size:20px; color:black; margin-left:30px;">
+            Upload Required Documents
+            </p> -->
+                <Span style="margin-left:40px;">  Passport Copy: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<apex:inputfile value="{!myfile.body}" filename="{!myfile.Name}"/> </Span>
+                <apex:commandbutton value="Upload" action="{!upload}"/><apex:outputText value="{!myfile.Name}" rendered="{!cmd}"/>
+                <br/><Span style="margin-left:40px;">  Pan Card: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<apex:inputfile value="{!myfile1.body}" filename="{!myfile1.Name}"/> </Span>
+                <apex:commandbutton value="Upload" action="{!upload1}"/><apex:outputText value="{!myfile1.Name}" rendered="{!cmd1}"/>
+           </div>
+        </apex:form>
+        <!-- div includes all buttons starts bottom -->
+        <apex:form >
+        <div class="slds-top-buttons">
+            <div class="slds-button-group slds-align_absolute-center" style="margin: 10px 0;" role="group">
+                <apex:commandButton styleClass="slds-button slds-button_brand" value="Submit Form" action="{!submitForm}" rerender="msg"/>
+            </div>
+        </div>
+        <!-- div includes all buttons ends bottom-->
+        </apex:form> 
+     <!--</apex:form>-->
+</apex:page>

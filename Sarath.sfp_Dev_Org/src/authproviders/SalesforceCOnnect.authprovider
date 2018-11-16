@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AuthProvider xmlns="http://soap.sforce.com/2006/04/metadata">
+    <authorizeUrl>https://sarath-developerforce-dev-ed.my.salesforce.com/services/auth/link/SalesforceCOnnect</authorizeUrl>
+    <consumerKey>1234567890</consumerKey>
+    <consumerSecret>FrV7+TEGmZCvdv5QQ8IlGnseb6ttevyb</consumerSecret>
+    <friendlyName>SalesforceCOnnect</friendlyName>
+    <includeOrgIdInIdentifier>false</includeOrgIdInIdentifier>
+    <providerType>OpenIdConnect</providerType>
+    <sendAccessTokenInHeader>true</sendAccessTokenInHeader>
+    <sendClientCredentialsInHeader>true</sendClientCredentialsInHeader>
+    <tokenUrl>https://sarath-developerforce-dev-ed.my.salesforce.com/services/auth/link/SalesforceCOnnect</tokenUrl>
+</AuthProvider>

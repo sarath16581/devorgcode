@@ -1,0 +1,4 @@
+<apex:page >
+    <apex:sectionHeader help="/apex/HelpPage" rendered="true" title="SectionHeader Page" subtitle="Test"
+                        description="Understand the Section Header concept"/>
+</apex:page>

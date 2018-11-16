@@ -1,0 +1,19 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,force:lightningQuickAction,flexipage:availableForRecordHome,lightning:actionOverride,force:hasRecordId,forceCommunity:availableForAllPageTypes" 
+                access="global" >
+    <aura:attribute name="conRec" type="Contact" default="{'sobjectType':'Contact'}"/>
+    <!--Section which will be rendered based on current user portal starts -->
+    <!-- Output Field Workaround -->
+    <force:outputField aura:id="accountLookupOutput" value="{!v.conRec.AccountId}" class="slds-hide"></force:outputField>
+    <center>
+     
+     <label> 
+         		 <!--<aura:if isTrue="{!v.conRec.testLookup__c == false}"> -->
+                'select_account' 
+         <div>
+            	<force:inputField aura:id="accLookup" value="{!v.conRec.AccountId}"/>
+         </div>
+        <!-- </aura:if>-->
+         </label>
+        
+ 	</center>    
+</aura:component>

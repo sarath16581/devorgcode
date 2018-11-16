@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Dynamic Field Generator</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Dynamic Field Generator</value>
+    </caseValues>
+    <fields>
+        <label><!-- ACTIVITIES --></label>
+        <name>ACTIVITIES__c</name>
+    </fields>
+    <fields>
+        <label><!-- ADDRESS --></label>
+        <name>ADDRESS__c</name>
+    </fields>
+    <fields>
+        <label><!-- CONTACT NUMBER --></label>
+        <name>CONTACT_NUMBER__c</name>
+    </fields>
+    <fields>
+        <label><!-- Email ADDRESS --></label>
+        <name>EMAIL_ADDRESS__c</name>
+    </fields>
+    <fields>
+        <label><!-- First Name --></label>
+        <name>First_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Name --></label>
+        <name>Last_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- OFFICE SPACE REQUIREMENT --></label>
+        <name>OFFICE_SPACE_REQUIREMENT__c</name>
+    </fields>
+    <fields>
+        <label><!-- PROPOSED COMPANY NAME 1 --></label>
+        <name>PROPOSED_COMPANY_NAME_1__c</name>
+    </fields>
+    <fields>
+        <label><!-- PROPOSED COMPANY NAME 2 --></label>
+        <name>PROPOSED_COMPANY_NAME_2__c</name>
+    </fields>
+    <fields>
+        <label><!-- PROPOSED COMPANY NAME 3 --></label>
+        <name>PROPOSED_COMPANY_NAME_3__c</name>
+    </fields>
+    <fields>
+        <label><!-- Partner Contact Number --></label>
+        <name>Partner_Contact_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Partner DOB Day --></label>
+        <name>Partner_DOB_Day__c</name>
+    </fields>
+    <fields>
+        <label><!-- Partner DOB Month --></label>
+        <name>Partner_DOB_Month__c</name>
+    </fields>
+    <fields>
+        <label><!-- Partner DOB Year --></label>
+        <name>Partner_DOB_Year__c</name>
+    </fields>
+    <fields>
+        <label><!-- Partner First Name --></label>
+        <name>Partner_First_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Partner Gender --></label>
+        <name>Partner_Gender__c</name>
+    </fields>
+    <fields>
+        <label><!-- Partner Last Name --></label>
+        <name>Partner_Last_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Partner Nationality --></label>
+        <name>Partner_Nationality__c</name>
+    </fields>
+    <fields>
+        <label><!-- Partner Passport --></label>
+        <name>Partner_Passport__c</name>
+    </fields>
+    <fields>
+        <label><!-- Rating Available --></label>
+        <name>Rating_Available__c</name>
+    </fields>
+    <fields>
+        <label><!-- TOTAL EMPLOYEES TO HIRE(FULL TIME) --></label>
+        <name>TOTAL_EMPLOYEES_TO_HIRE_FULL_TIME__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

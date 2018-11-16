@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailServicesFunction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apexClass>CreateLeadExample</apexClass>
+    <attachmentOption>All</attachmentOption>
+    <authenticationFailureAction>Discard</authenticationFailureAction>
+    <authorizationFailureAction>Discard</authorizationFailureAction>
+    <authorizedSenders>sharath.burra@gmail.com</authorizedSenders>
+    <emailServicesAddresses>
+        <authorizedSenders>sharath.burra@gmail.com</authorizedSenders>
+        <developerName>28000000MPtL</developerName>
+        <isActive>true</isActive>
+        <localPart>email2lead</localPart>
+        <runAsUser>sarath.sfp@gmail.com</runAsUser>
+    </emailServicesAddresses>
+    <emailServicesAddresses>
+        <authorizedSenders>sharath.burra@gmail.com</authorizedSenders>
+        <developerName>28000000MPtQ</developerName>
+        <isActive>true</isActive>
+        <localPart>email2lead</localPart>
+        <runAsUser>sarath.sfp@gmail.com</runAsUser>
+    </emailServicesAddresses>
+    <functionInactiveAction>Discard</functionInactiveAction>
+    <functionName>email2lead</functionName>
+    <isActive>true</isActive>
+    <isAuthenticationRequired>true</isAuthenticationRequired>
+    <isErrorRoutingEnabled>false</isErrorRoutingEnabled>
+    <isTextAttachmentsAsBinary>false</isTextAttachmentsAsBinary>
+    <isTlsRequired>false</isTlsRequired>
+    <overLimitAction>Discard</overLimitAction>
+</EmailServicesFunction>

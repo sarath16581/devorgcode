@@ -1,0 +1,76 @@
+<apex:page standardController="Contract" extensions="casecontroller">
+<apex:form >
+  <apex:tabPanel switchType="client" selectedTab="name2" id="theTabPanel">
+        <apex:tab label="Service Request" name="name1" id="tabOne">
+        <apex:pageBlock >
+            <apex:pageblocksection >
+            
+            <apex:outputLabel >Serice Request :</apex:outputLabel>
+            <apex:selectList value="{!selectedValue}" size="1">
+                <apex:selectOption itemLabel="--None--" itemValue="--None--"/>
+                <apex:selectOption itemLabel="Claim Entry" itemValue="Claim Entry"/>
+                <apex:selectOption itemLabel="Claim Payment" itemValue="Claim Payment"/>
+                <apex:selectOption itemLabel="Claim Reversal and Adjustment" itemValue="Claim Reversal and Adjustment"/>  
+                <!--<apex:actionSupport event="onchange" action="{!populateFields}"/>-->            
+            </apex:selectList>
+            
+            
+                
+                <apex:outputlabel >Field1 :</apex:outputlabel>
+                <apex:inputText value="{!field1Value}"/>
+                
+                 
+                <apex:outputlabel >Field2 :</apex:outputlabel>
+                <apex:inputText value="{!field2Value}"/>
+                 
+                  
+                <apex:outputlabel >Field3 :</apex:outputlabel>
+                <apex:inputText value="{!field3Value}"/>
+                 
+                  
+                <apex:outputlabel >Field4 :</apex:outputlabel>
+                <apex:inputText value="{!field4Value}"/>
+                 
+                <apex:commandButton value="Create Case" action="{!SaveData}"/>
+            
+            
+            </apex:pageblocksection>
+            </apex:pageBlock>
+        </apex:tab>
+        <apex:tab label="Letters" name="name2" id="tabTwo">
+        <apex:pageBlock >
+            <apex:pageblocksection >
+        <apex:outputLabel >Serice Request :</apex:outputLabel>
+            <apex:selectList value="{!selectedValue}" size="1">
+                <apex:selectOption itemLabel="--None--" itemValue="--None--"/>
+                <apex:selectOption itemLabel="Letter1" itemValue="Letter1"/>
+                <apex:selectOption itemLabel="Letter2" itemValue="Letter2"/>
+                <apex:selectOption itemLabel="Letter3" itemValue="Letter3"/>  
+                <apex:actionSupport event="onchange" action="{!populateFields}"/>            
+            </apex:selectList>
+            
+            
+                
+                <apex:outputlabel >Field1 :</apex:outputlabel>
+                <apex:inputText value="{!field1Value}"/>
+                
+                 
+                <apex:outputlabel >Field2 :</apex:outputlabel>
+                <apex:inputText value="{!field2Value}"/>
+                 
+                  
+                <apex:outputlabel >Field3 :</apex:outputlabel>
+                <apex:inputText value="{!field3Value}"/>
+                 
+                  
+                <apex:outputlabel >Field4 :</apex:outputlabel>
+                <apex:inputText value="{!field4Value}"/>
+                 
+                <apex:commandButton value="Create Case" action="{!SaveData}"/>
+                </apex:pageblocksection>
+                </apex:pageBlock>
+            
+        </apex:tab>
+    </apex:tabPanel>
+    </apex:form>
+</apex:page>

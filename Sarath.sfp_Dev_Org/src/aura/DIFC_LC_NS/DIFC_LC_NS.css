@@ -1,0 +1,252 @@
+.THIS body{
+  font-family:Helvetica;
+  font-size:12px;
+}
+.THIS header{
+  width:100%;
+  background-color:rgb(27,29,76);
+  height:45px;  
+  font-size:12px;
+}
+.THIS .text-container{
+  padding:14px 5px;
+  float:right;
+  margin-right:1%;
+}
+.THIS header .text-container span{
+  color:white;
+  padding:10px;
+  opacity:0.7;
+}
+.THIS .clear{
+  clear:both;
+}
+.THIS .secondary-header{
+  padding:0px;
+  border:1px solid #d7dae0;
+  height:60px;
+}
+.THIS .secondary-header .left-container{
+  width:24%;
+  float:left;
+  margin-right:5%;
+  padding:10px 10px 40px 10px;
+}
+.THIS .secondary-header .left-container img{
+  height:48px;
+  padding:0px 0px 0px 0px;
+}
+.THIS .secondary-header .right-container{
+  float:left;
+  width:67%;
+  padding:10px 0px 0px 0px;
+}
+
+.THIS .secondary-header .img-container{
+  float:left;
+  width:3%;
+  padding:10px 0px;
+}
+.THIS .secondary-header .img-container img{
+  margin-left:-5px;
+}
+.THIS .secondary-header .right-container .text-container{
+  border-right: 2px solid gray;
+}
+.THIS .secondary-header .right-container .text-container span{
+  color:gray;
+  padding:10px;
+}
+.THIS .legend-container{
+  position:relative;
+    left:15%;
+  width:70%;
+    right:15%;
+  border:0px solid red;
+  height:600px;
+}
+
+.THIS .legend-container .title-name-container{
+  font-weight:300px;
+  font-size:33px;
+  color:rgb(27,29,76);
+  float:left;
+  width:50%;
+  padding-left:20px !important;
+}
+.THIS .legend-container .save-for-later{
+  width:20%;
+  float:right;
+  font-size:12px;
+  border:1px solid;
+  padding:15px 10px;
+  text-align:center;
+  cursor:pointer;
+  text-decoration:none;
+}
+.THIS .legend-container .bar-container img{
+  width:102%;
+  height:50px;
+  margin-left:1%;
+}
+.THIS .legend-container .sub-text-container{
+  color:rgb(27,29,76);
+  font-weight:bold;
+  font-size:14px;
+  float:left;
+    padding-left:20px !important;
+}
+
+.THIS .legend-container .main-container{
+  color:rgb(27,29,76);
+  font-size:12px;
+  float:left;
+    padding-left:20px !important;
+    width:30%;
+}
+
+.THIS .legend-container .main-container .sub-fields-container{
+  color:rgb(27,29,76);
+  font-size:12px;
+  padding-right:230px;
+  float:left;
+}
+.THIS input[type=text]{
+     padding:17px 10px;
+    font-weight:1px;
+    box-sizing:border-box; 
+    border:1px solid rgb(230,230,230);
+    margin-bottom:10px;
+    margin-top:2px;
+    width:60%;
+}
+
+.THIS .legend-container .main-container .sub-fields-container .name-container{
+  margin-top:-5px;
+}
+.THIS .legend-container .main-container .sub-fields-container .name-container .first-name-box{
+  width:50%;
+  float:left;
+}
+.THIS .legend-container .main-container .sub-fields-container .name-container .last-name-box{
+  width:50%;
+     float:left;
+}
+.THIS .legend-container .contextual-help-container{
+  width:46%;
+  border-top:3px solid rgb(153, 153, 153);
+  height:150px;
+  float:right;
+  margin-left:1rem;
+  background-color:rgb(245,245,245);
+  color:rgb(27,29,76);
+}
+
+.THIS input[type=text]#first{
+  width:38%;
+  margin-top:0px;
+    padding:17px 10px;
+}
+
+.THIS input[type=text]#last{
+  width:38%;
+  margin-top:0px;
+    padding:17px 10px;
+    float:right;
+    margin-right:110px;
+}
+
+.THIS input[type=text]#space{
+  width:35%;
+  margin-top:0px;
+    padding:17px 10px;
+}
+
+.THIS input[type=text]#emp{
+  width:35%;
+  margin-top:0px;
+    padding:17px 10px;
+    float:right;
+    margin-right:110px;
+}
+.THIS input[type=text]#email{
+  width:80%;
+  margin-top:0px;
+    padding:17px 10px;
+}
+
+.THIS .legend-container .contextual-help-container .side2-text{
+  padding:10px 0px 10px 5%;
+  font-size:12px;
+}
+
+.THIS .legend-container .contextual-help-container .sub-text{
+  padding:0px 5%;
+}
+.THIS .legend-container .main-container .sub-fields-container .email-container{
+  padding-top:10px;
+  padding-bottom:10px;
+}
+
+.THIS .legend-container .main-container .sub-fields-container .activity-container{
+  padding-bottom:10px;
+}
+
+.THIS input[type=text]#phone{
+  width:80%;
+  margin-top:0px;
+     padding:17px 10px;
+  
+}
+.THIS input[type=text]#activity{
+  width:70%;
+  margin-top:0px;
+     padding:8px 10px 35px 10px;
+    height: 80px;
+  
+}
+.THIS input[type=text]#address{
+  width:105%;
+  margin-top:0px;
+     padding:17px 10px;
+}
+.THIS .legend-container .main-container .sub-fields-container .address-container .address-input-container{
+    width:50%;
+    float:left;
+}
+.THIS .legend-container .main-container .sub-fields-container .address-container .address-input-container .address-text{
+   padding-top:10px;
+}
+.THIS .legend-container .main-container .sub-fields-container .address-container{
+    padding-top:10px;
+  padding-bottom:10px;
+}
+
+.THIS .legend-container .main-container .sub-fields-container .address-container .find-button{
+  float:left;
+  background-color: white;
+    border: 1px solid rgb(166, 166, 166);
+    color: rgb(27,29,76);
+    padding: 13px 47px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 0px 31px;
+    cursor: pointer;
+    width:25%;
+}
+
+
+.THIS .legend-container .main-container .sub-fields-container .continue{
+    margin-top:25px;
+    margin-right:25px;
+    background-color: rgb(27,29,76); /* Green */
+    border: none;
+    color: white;
+    padding:15px 230px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}

@@ -1,0 +1,330 @@
+<aura:component controller="DIFC_LAV_Ctrl" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+	
+    <aura:attribute name="step1" type="Boolean" default='true' />
+    <aura:attribute name="step2" type="Boolean" default='false' />
+    <aura:attribute name="step3" type="Boolean" default='false' />
+    <aura:attribute name="globalpDOBDay" type="String[]" />
+    <aura:attribute name="globalpDOBMonth" type="String[]" />
+    <aura:attribute name="recordId" type="Id" />
+    <aura:attribute name="globalpDOBYear" type="String[]" />
+    <aura:attribute name="maleRadio" type="boolean" default="false" />
+    <aura:attribute name="femaleRadio" type="boolean" default="false" />
+    <aura:attribute name="message" type="String" />
+    <aura:attribute name="appRecord" type="Application_Form__c" default="{'sobjectType':'Application_Form__c',
+                                                                          'CONTACT_NUMBER__c':'+971',
+                                                                          'Partner_Contact_Number__c':'+971'}" />
+   
+    <body>
+        <header>
+            <div class="text-container">
+                <span>NEWSROOM</span>
+                <span>EVENTS</span>
+                <span>MAKE AN ENQUIRY</span>
+                <span>PUBLIC REGISTER</span>
+                <span>LOGOUT</span>
+            </div>
+        </header>
+        <div class="clear"/>
+        <div class="secondary-header">
+            <div class="left-container">
+                <img src="https://image.ibb.co/dcSWbT/dubai.png" alt="dubai" border="0">
+                </img>
+            </div>
+            <div class="right-container">
+                <div class="text-container">
+                    <span>ABOUT</span>
+                    <span>AREAS OF BUSINESS</span>
+                    <span>SETTING UP</span>
+                    <span>OPERATING</span>
+                    <span>PROPERTIES</span>
+                    <span>LAWS &amp; REGULATIONS</span>
+                    <span>COMMUNITY</span> 
+                </div>
+            </div>
+            
+            <div class="img-container">
+                <img src="https://image.ibb.co/ng2L38/search_icon.png" alt="search_icon" border="0">
+                </img>
+            </div>
+            <div class="clear"/>
+        </div>
+        <div class="clear"/>
+        <!-- Code for step 1 starts -->
+        <aura:if isTrue="{!v.step1}">
+            <div class="legend-container">
+                <div class="form-container">
+                    <div class="title-name-container"><b>INITIAL APPLICATION FORM</b></div>
+                    <lightning:button variant="neutral" label="SAVE FOR LATER" aura:id="saveforlater" class="save-for-later"/>
+                    
+                </div>
+                <div class="clear"/>
+                <div class="clear"/>
+                <div class="bar-container">
+                    <!-- <img src="{!$Resource.progressbar}" alt="bar" border="0" /> -->
+                    <img src="https://preview.ibb.co/jXx9wT/bar.png" alt="bar" border="0">
+                    </img>
+                </div>
+            </div>
+            <div class="clear"/>
+            <br/>
+            <br/>
+            <br/>
+            <aura:if isTrue="{!!empty(v.message)}">
+            	<ui:message title="Error!" severity="error" closable="true"> {!v.message} </ui:message>
+        	</aura:if>
+            <div class="legend-container-second">
+                <Span class="legend-container-second-division1">
+                    <div class="sub-text-container"><b>STEP1: APPLICATION DETAILS</b></div>
+                    <br/>
+                    <div class="main-container">
+                        <div class="sub-fields-container">
+                            
+                            <Span><div class="name-container">
+                                <p class="name-tag">NAME</p>
+                                <span class="first-name-box">
+                                   <!-- <input type="text" placeholder="First" id="first">
+                                    </input> -->
+                                    <ui:inputText value="{!v.appRecord.First_Name__c}" aura:id="first" placeholder="First"/>
+                                </span> &nbsp;
+                                <span class="last-name-box">
+                                    <ui:inputText value="{!v.appRecord.Last_Name__c}" aura:id="last" placeholder="Last"/>
+                                </span>
+                                
+                                </div></Span>
+                            <div class="clear"/>
+                            <br/>
+                            <div class="email-container">
+                                <p class="email-text">EMAIL ADDRESS</p>  
+                                <ui:inputText value="{!v.appRecord.EMAIL_ADDRESS__c}" aura:id="email" placeholder="email@emailaddress.com" class="genericClass"/> 
+                             
+                            </div>
+                            <br/>
+                            <div class="phone-container">
+                                <p class="phone-text">CONTACT NUMBER</p> 
+                                <ui:inputText value="{!v.appRecord.CONTACT_NUMBER__c}" aura:id="phone" class="genericClass"/> 
+                                
+                            </div>
+                            <br/>
+                            <div class="address-container">
+                                
+                                <Span class="address-input-container">
+                                    <p class="address-text">ADDRESS</p>
+                                     <ui:inputText value="{!v.appRecord.ADDRESS__c}" aura:id="address" placeholder="Address" class="addressclass"/> 
+                                     &nbsp;&nbsp;
+                                    <span><lightning:button variant="neutral" label="Find" aura:id="findbutton" class="find-button"/> </span>
+                                </Span> 
+                                
+                            </div>
+                            <br/>
+                            <div class="clear"></div>
+                            <div>
+                                <lightning:button variant="brand" label="CONTINUE" aura:id="continueButton" class="continue" onclick="{!c.ContinueStep1Action }"/> 
+                                
+                            </div>
+                        </div>
+                    </div>
+                </Span>
+                <Span class="legend-container-second-division2">
+                    <div class="contextual-help-container">
+                        <p class="side2-text">CONTEXTUAL HELP</p>
+                        <br/>
+                        <p class="sub-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco</p>
+                    </div>
+                </Span>
+            </div>
+        </aura:if>
+        <!-- Code for step 1 ends -->
+        
+        <!-- Code for step 2 starts -->
+        <aura:if isTrue="{!v.step2}">
+            <div class="legend-container">
+                <div class="form-container">
+                    <div class="title-name-container"><b>INITIAL APPLICATION FORM</b></div>
+                    <lightning:button variant="neutral" label="SAVE FOR LATER" aura:id="saveforlater" class="save-for-later"/>
+                    
+                </div>
+                <div class="clear"/>
+                <div class="clear"/>
+                <div class="bar-container">
+                     <img src="{!$Resource.progressbar}" alt="bar" border="0" /> 
+                    <!-- <img src="https://preview.ibb.co/jXx9wT/bar.png" alt="bar" border="0"> 
+                    </img> -->
+                </div>
+            </div>
+            <div class="clear"/>
+            
+            <div class="legend-container-second">
+                <Span class="legend-container-second-division1">
+                    <div class="sub-text-container"><b>STEP2: BUSINESS ACTIVITY</b></div>
+                    <br/>
+                    <div class="main-container">
+                        <div class="sub-fields-container">
+                            
+                            <div class="email-container">
+                                <p class="email-text">ACTIVITIES</p>  
+                                <ui:inputTextArea value="{!v.appRecord.ACTIVITIES__c}" aura:id="activities" placeholder="Please eloborate further on the activities that you plan to conduct" class="activityClass" cols="5" rows="4"/> 
+                             
+                            </div>
+                            <br/>
+                            
+                            <Span><div class="name-container">
+                                <span >
+                                    
+                                    <p>OFFICE SPACE REQUIREMENT &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;TOTAL EMPLOYEES TO HIRE(FULL TIME)</p>
+                                
+                                </span>
+                                <span class="first-name-box">
+                                    
+                                    <ui:inputText value="{!v.appRecord.OFFICE_SPACE_REQUIREMENT__c}" aura:id="offSPR" class="offSPR"/>
+                                </span> 
+                                &nbsp;
+                                
+                                <span class="last-name-box">
+                                    
+                                    <ui:inputText value="{!v.appRecord.TOTAL_EMPLOYEES_TO_HIRE_FULL_TIME__c}" aura:id="teTH" class="teTH"/>
+                                </span>
+                                
+                                </div></Span>
+                            <div class="clear"/>
+                            <br/>
+                            <div class="email-container">
+                                <p class="email-text">PROPOSED COMPANY NAME 1</p>  
+                                <ui:inputText value="{!v.appRecord.PROPOSED_COMPANY_NAME_1__c}" aura:id="PCN1" class="genericClass"/> 
+                             
+                            </div>
+                            <br/>
+                            <div class="phone-container">
+                                <p class="phone-text">PROPOSED COMPANY NAME 2</p> 
+                                <ui:inputText value="{!v.appRecord.PROPOSED_COMPANY_NAME_2__c}" aura:id="PCN2" class="genericClass"/> 
+                                
+                            </div>
+                            <br/>
+                            <div class="address-container">
+                                <p class="phone-text">PROPOSED COMPANY NAME 3</p>
+                                     <ui:inputText value="{!v.appRecord.PROPOSED_COMPANY_NAME_3__c}" aura:id="PCN3" class="genericClass"/> 
+                                   
+                            </div>
+                            <br/>
+                            <div class="clear"></div>
+                            <div>
+                                <lightning:button variant="brand" label="SAVE AND CONTINUE" aura:id="SaveANDcontinueButton" class="saveandcontinuestep2" onclick="{!c.ContinueStep2Action }"/> 
+                                
+                            </div>
+                        </div>
+                    </div>
+                </Span>
+                <Span class="legend-container-second-division2">
+                    <div class="contextual-help-container">
+                        <p class="side2-text">CONTEXTUAL HELP</p>
+                        <br/>
+                        <p class="sub-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco</p>
+                    </div>
+                </Span>
+            </div>
+        </aura:if>
+        <!-- Code for step 2 ends -->
+        
+        <!-- Code for step 3 starts -->
+        <aura:if isTrue="{!v.step3}">
+            <div class="legend-container">
+                <div class="form-container">
+                    <div class="title-name-container"><b>INITIAL APPLICATION FORM</b></div>
+                    <lightning:button variant="neutral" label="SAVE FOR LATER" aura:id="saveforlater" class="save-for-later"/>
+                    
+                </div>
+                <div class="clear"/>
+                <div class="clear"/>
+                <div class="bar-container">
+                     <img src="{!$Resource.progressbarstep3}" alt="bar" border="0" /> 
+                    <!-- <img src="https://preview.ibb.co/jXx9wT/bar.png" alt="bar" border="0"> 
+                    </img> -->
+                </div>
+            </div>
+            <div class="clear"/>
+            
+            <div class="legend-container-second">
+                <Span class="legend-container-second-division1">
+                    <div class="sub-text-container"><b>STEP3: LIST OF PARTNERS/STAKEHOLDERS</b></div>
+                    <br/>
+                    <div class="main-container">
+                        <div class="sub-fields-container">
+                            
+                            <Span><div class="name-container">
+                                <p class="name-tag">NAME</p>
+                                <span class="first-name-box">
+                                   <!-- <input type="text" placeholder="First" id="first">
+                                    </input> -->
+                                    <ui:inputText value="{!v.appRecord.Partner_First_Name__c}" aura:id="pfirst" placeholder="First"/>
+                                </span> &nbsp;
+                                <span class="last-name-box">
+                                    <ui:inputText value="{!v.appRecord.Partner_Last_Name__c}" aura:id="plast" placeholder="Last"/>
+                                </span>
+                                
+                                </div></Span>
+                            <div class="clear"/>
+                            <br/>
+                            <div class="email-container">
+                                <p class="email-text">NATIONALITY</p>  
+                                <ui:inputText value="{!v.appRecord.Partner_Nationality__c}" aura:id="pNationality" class="genericClass"/> 
+                             
+                            </div>
+                            <br/>
+                            <div class="phone-container">
+                                <p class="phone-text">PASSPORT NUMBER</p> 
+                                <ui:inputText value="{!v.appRecord.Partner_Passport__c}" aura:id="pPassportNumber" class="genericClass"/> 
+                                
+                            </div>
+                            <br/>
+                            <Span><div class="name-container">
+                                <p class="name-tag">DATE OF BIRTH</p>
+                                <span class="first-name-box">
+                                   <!-- <input type="text" placeholder="First" id="first">
+                                    </input> -->
+                                    <ui:inputSelect value="{!v.appRecord.Partner_DOB_Day__c}" aura:id="pDOBDay" class="DOBClass"/>
+                                </span> &nbsp;
+                                <span class="last-name-box">
+                                    <ui:inputSelect value="{!v.appRecord.Partner_DOB_Month__c}" aura:id="pDOBMon" class="DOBClass"/>
+                                </span>&nbsp;
+                                <span class="last-name-box">
+                                    <ui:inputSelect value="{!v.appRecord.Partner_DOB_Year__c}" aura:id="pDOByear" class="DOBClass"/>
+                                </span>
+                                </div></Span>
+                            <br/>
+                            <Span><div class="name-container">
+                                <p class="name-tag">GENDER</p>
+                                <span >
+                                    <ui:inputRadio aura:id="r0" name="others" value="{!v.maleRadio}" label="Male" class="maleradio"></ui:inputRadio>  &nbsp;&nbsp;
+                                    <ui:inputRadio aura:id="r0" name="others" value="{!v.femaleRadio}" label="Female" class="femaileradio"  />
+                                </span>
+                                
+                                
+                                </div></Span>
+                            <br/>
+                            <div class="phone-container">
+                                <p class="phone-text">CONTACT NUMBER</p> 
+                                <ui:inputText value="{!v.appRecord.Partner_Contact_Number__c}" aura:id="partnerphone"  class="genericClass"/> 
+                                
+                            </div>
+                            <br/>
+                            <div class="clear"></div>
+                            
+                             
+                        </div>
+                    </div>
+                      <div class="slds-button-group" role="group"> <lightning:button variant="brand" label="SAVE AND CONTINUE" aura:id="SaveANDcontinueButtonStep3" class="saveandcontinuestep3"/> &nbsp;&nbsp;&nbsp;
+                                <lightning:button variant="brand" label="SAVE AND ADDANOTHER+" aura:id="SaveANDanother" class="saveandaddanotherstep3"/> </div>
+                            
+                </Span>
+                <Span class="legend-container-second-division2">
+                    <div class="contextual-help-container">
+                        <p class="side2-text">CONTEXTUAL HELP</p>
+                        <br/>
+                        <p class="sub-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco</p>
+                    </div>
+                </Span>
+            </div>
+        </aura:if>
+        <!-- Code for step 3 ends --> 
+    </body>
+    
+</aura:component>

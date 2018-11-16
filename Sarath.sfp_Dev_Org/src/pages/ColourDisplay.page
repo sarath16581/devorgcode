@@ -1,0 +1,10 @@
+<apex:page controller="ColourExample">
+    <apex:form >
+   		<apex:pageBlock title="Colour Display">
+        	<apex:pageBlockButtons style="backgrond:{!Colour}">
+            	<apex:commandButton value="Submit" action="{!Green}"/>
+        		<apex:commandButton value="Cancel" action="{!Red}"/>
+            </apex:pageBlockButtons>
+		</apex:pageBlock>
+    </apex:form>
+</apex:page>

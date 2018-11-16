@@ -1,0 +1,15 @@
+<apex:page controller="FormGenerationController" showHeader="false" sidebar="false">
+    <apex:slds />
+    <apex:includeLightning />
+    <apex:form >
+    <apex:image url="{!$Resource.difc}" width="1500" height="auto"/>
+    <br/><br/><br/>
+    <center>
+    <p style="font-size:30px; color:black;">
+    Your form is successfully Submitted. Your form number is {!FormName} Please use this number for future reference.
+    
+    Have a good day!!
+    </p>
+    </center>
+    </apex:form>
+</apex:page>

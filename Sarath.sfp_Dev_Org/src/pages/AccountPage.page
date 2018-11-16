@@ -1,0 +1,90 @@
+<apex:page controller="clsAccount">
+ <!-- <apex:pageBlock >
+      
+          <apex:pageBlockSection >
+          <apex:outputLabel > Account Name</apex:outputLabel>
+              <apex:outputLabel > Aethna Home Products</apex:outputLabel>
+              <apex:outputLabel > Account Type</apex:outputLabel>
+              <apex:outputLabel > Customer - Direct</apex:outputLabel>
+              <apex:outputLabel > Account Number</apex:outputLabel>
+              <apex:outputLabel > 01908133019 </apex:outputLabel>
+              <apex:outputLabel > Industry </apex:outputLabel>
+              <apex:outputLabel > Product</apex:outputLabel>
+          </apex:pageBlockSection>
+      
+  </apex:pageBlock>-->
+  <apex:pageBlock >
+  
+  <apex:tabPanel switchType="client" selectedTab="name1" id="theTabPanel">
+        <apex:tab label="Contract Details" name="name1" id="tabOne">
+        
+        
+         <apex:pageBlock >
+      
+          <apex:pageBlockSection >
+          <apex:outputLabel > Contract Number</apex:outputLabel>
+          <apex:outputLabel > 00000100</apex:outputLabel>
+          <apex:outputLabel > Account Name</apex:outputLabel>
+              <apex:outputLabel > Aethna Home Products</apex:outputLabel>
+              
+              <apex:outputLabel >Status</apex:outputLabel>
+              <apex:outputLabel > Draft</apex:outputLabel>
+              <apex:outputLabel >Contract Start Date</apex:outputLabel>
+              <apex:outputLabel >4/21/2016</apex:outputLabel>
+              <apex:outputLabel >Contract End Date</apex:outputLabel>
+              <apex:outputLabel >9/20/2016</apex:outputLabel>
+          </apex:pageBlockSection>
+      
+  </apex:pageBlock>
+        
+  
+  </apex:tab>
+  <apex:tab label="Claim Details" name="name2" id="tabtwo">
+       <apex:pageBlock >
+      
+          <apex:pageBlockSection >
+          <apex:outputLabel > Claim Number</apex:outputLabel>
+          <apex:outputLabel > 00001032</apex:outputLabel>
+          <apex:outputLabel > Account Name</apex:outputLabel>
+              <apex:outputLabel > Aethna Home Products</apex:outputLabel>
+              
+              <apex:outputLabel >Status</apex:outputLabel>
+              <apex:outputLabel > New</apex:outputLabel>
+              <apex:outputLabel >Contact Name</apex:outputLabel>
+              <apex:outputLabel >Andy Young</apex:outputLabel>
+              <apex:outputLabel >Priority</apex:outputLabel>
+              <apex:outputLabel >Medium</apex:outputLabel>
+          </apex:pageBlockSection>
+      
+  </apex:pageBlock>
+        
+  
+  </apex:tab>
+  <apex:tab label="Account Details" name="name3" id="tabThree">
+      <apex:pageBlock >
+      
+          <apex:pageBlockSection >
+          <apex:outputLabel > Account Name</apex:outputLabel>
+              <apex:outputLabel > Aethna Home Products</apex:outputLabel>
+              <apex:outputLabel > Account Type</apex:outputLabel>
+              <apex:outputLabel > Customer - Direct</apex:outputLabel>
+              <apex:outputLabel > Account Number</apex:outputLabel>
+              <apex:outputLabel > 01908133019 </apex:outputLabel>
+              <apex:outputLabel > Industry </apex:outputLabel>
+              <apex:outputLabel > Product</apex:outputLabel>
+          </apex:pageBlockSection>
+      
+  </apex:pageBlock>
+  </apex:tab>
+  </apex:tabPanel>
+  
+  
+  
+  
+  </apex:pageBlock>
+  
+  
+  
+  
+  
+  </apex:page>

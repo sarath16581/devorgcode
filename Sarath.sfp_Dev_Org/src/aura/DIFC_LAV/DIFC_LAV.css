@@ -1,0 +1,321 @@
+.THIS body{
+  font-family:Helvetica;
+  font-size:12px;
+}
+.THIS header{
+  width:100%;
+  background-color:rgb(27,29,76);
+  height:45px; 
+  
+  font-size:12px;
+}
+.THIS .text-container{
+  padding:14px 5px;
+  float:right;
+  margin-right:1%;
+}
+.THIS header .text-container span{
+  color:white;
+  padding:10px;
+  opacity:0.7;
+}
+.THIS .clear{
+  clear:both;
+}
+.THIS .secondary-header{
+  padding:0px;
+  border:1px solid #d7dae0;
+  height:60px;
+}
+.THIS .secondary-header .left-container{
+  width:24%;
+  float:left;
+  margin-right:5%;
+  padding:10px 10px 40px 10px;
+}
+.THIS .secondary-header .left-container img{
+  height:48px;
+  padding:0px 0px 0px 0px;
+}
+.THIS .secondary-header .right-container{
+  float:left;
+  width:67%;
+  padding:10px 0px 0px 0px;
+}
+
+.THIS .secondary-header .img-container{
+  float:left;
+  width:3%;
+  padding:10px 0px;
+}
+.THIS .secondary-header .img-container img{
+  margin-left:-5px;
+}
+.THIS .secondary-header .right-container .text-container{
+  border-right: 2px solid gray;
+}
+.THIS .secondary-header .right-container .text-container span{
+  color:gray;
+  padding:10px;
+}
+.THIS .legend-container{
+  position:relative;
+  left:15%;
+  width:70%;
+  padding:10px;
+  border:0px solid red;
+  height:100px;
+}
+
+
+.THIS .legend-container-second{
+  position:relative;
+  left:15%;
+  width:70%;
+  padding:10px;
+  border:0px solid red;
+  
+}
+.THIS .legend-container-second-division1{
+	float:left;
+  width:35%;
+  padding:10px;
+  border:0px solid red;
+  
+}
+.THIS .legend-container-second-division2{
+	float:right;
+  width:45%;
+  padding:20px;
+ border-top:3px solid rgb(153, 153, 153);
+  background-color:rgb(245,245,245);
+  margin-top:70px;
+}
+
+.THIS .legend-container.bar-container{
+    height: 30px !important;
+}
+.THIS .legend-container .title-name-container{
+  font-weight:300;
+  font-size:35px;
+  color:rgb(27,29,76);
+  float:left;
+  
+  padding-left:0px !important;
+}
+.THIS .legend-container .save-for-later{
+  width:170px;
+  float:right;
+  font-size:12px;
+  border:1px solid;
+  padding:11px 8px;
+  text-align:center;
+  cursor:pointer;
+  text-decoration:none;
+}
+.THIS .legend-container .bar-container img{
+  width:102%;
+  height:50px;
+  margin-left:-1%;
+}
+.THIS .legend-container .sub-text-container{
+  color:rgb(27,29,76);
+  font-weight:bold;
+  font-size:14px;
+    left:20%;
+  width:60%;
+}
+
+.THIS .legend-container .main-container .sub-fields-container{
+  
+  color:rgb(27,29,76);
+  font-size:12px;
+  font-weight:bold;
+  width:60%;
+  float:left;
+  
+}
+
+
+.THIS .main-container{
+  
+  
+  padding-top:10px;
+}
+
+.THIS .main-container .name-container{
+  margin-top:-5px;
+    width:800px;
+}
+.THIS .legend-container .sub-fields-container .name-container .first-name-box{
+  
+  float:left;
+}
+.THIS .legend-container .sub-fields-container .name-container .last-name-box{
+
+  float:right;
+  margin-left:10px;
+}
+.THIS .legend-container .contextual-help-container{
+  
+  border-top:5px solid rgb(27,29,76);
+  height:150px;
+  float:right;
+  margin-left:3rem;
+  background-color:rgb(216,216,216);
+  color:rgb(27,29,76);
+}
+
+.THIS .genericClass{
+  width:450px !important;
+	padding: 12px 20px;
+    box-sizing:border-box;
+}
+.THIS .DOBClass{
+  width:145px;
+	padding: 12px 20px;
+    box-sizing:border-box;
+     border: 1px solid rgb(230,230,230);
+}
+.THIS .emailclass{
+  width:450px;
+	padding: 12px 20px;
+    box-sizing:border-box;
+}
+.THIS .phoneclass{
+  width:450px;
+	padding: 12px 20px;
+    box-sizing:border-box;
+}
+.THIS .addressclass{
+  width:330px !important;
+	padding: 12px 20px;
+    box-sizing:border-box;
+}
+.THIS .input{
+    padding:12px;
+    width:220px;
+    border: 1px solid rgb(230,230,230);
+}
+.THIS .activityClass{
+  width:450px;
+	padding: 12px 20px;
+    box-sizing:border-box;
+    padding:12px;
+    border: 1px solid rgb(230,230,230);
+}
+.THIS .offSPR{
+  width:220px !important;
+	
+}
+.THIS .maleradio{
+  width:20px !important;
+	float:left;
+    
+    
+    border: 1px solid rgb(230,230,230);
+}
+.THIS .femaileradio{
+  width:20px !important;
+	float:left;
+    
+    
+    border: 1px solid rgb(230,230,230);
+}
+.THIS .teTH{
+  width:220px !important;
+	
+}
+.THIS .legend-container .contextual-help-container .side2-text{
+  padding:20px;
+  font-size:12px;
+
+}
+
+.THIS .legend-container .contextual-help-container .sub-text{
+  padding:20px;
+}
+.THIS .sub-fields-container .email-container{
+  padding-top:10px;
+  padding-bottom:10px;
+}
+
+
+
+.THIS .address-container .address-input-container{
+    width: 800px;
+    float:left;
+
+}
+.THIS .address-container .address-input-container .address-text{
+   padding-top:10px;
+}
+.THIS .address-container{
+  padding-bottom:10px;
+}
+
+.THIS .address-container .find-button{
+  
+  background-color: white;
+    border: 1px solid rgb(27,29,76);
+    color: rgb(27,29,76);
+    padding: 7px 38px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    
+    cursor: pointer;
+}
+
+
+.THIS .sub-fields-container .continue{
+    margin-top:25px;
+    background-color: rgb(27,29,76); /* Green */
+    border: none;
+    color: white;
+    padding: 12px 185px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+
+}
+.THIS .saveandcontinuestep3{
+    background-color: rgb(27,29,76); /* Green */
+    border: none;
+    color: white;
+
+    display: inline-block;
+    margin-top:25px;
+    
+    width:220px;
+    font-size: 12px;
+    padding-top:12px;
+    padding-bottom:12px;
+}
+.THIS .saveandaddanotherstep3{
+    background-color: rgb(27,29,76); /* Green */
+    border: none;
+    color: white;
+
+    display: inline-block;
+    margin-top:25px;
+    
+    width:220px;
+    font-size: 12px;
+    padding-top:12px;
+    padding-bottom:12px;
+}
+.THIS .saveandcontinuestep2{
+    background-color: rgb(27,29,76); /* Green */
+    border: none;
+    color: white;
+	width:450px;
+    padding-top:12px;
+    padding-bottom:12px;
+    display: inline-block;
+    margin-top:25px;
+    float:left;
+    font-size: 16px;
+}

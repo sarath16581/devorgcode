@@ -1,0 +1,15 @@
+<apex:page sidebar="false" standardStylesheets="false" showheader="false">
+ <apex:slds />
+    <apex:includeLightning />
+    <div id="lightning" ></div> 
+    <script>
+ $Lightning.use("c:DIFC_LC_NS_App", function() {
+ $Lightning.createComponent("c:DIFC_LC_NS",
+           { label : "" ,         
+          },
+          "lightning",
+          function(cmp) {
+          });
+        });
+     </script>
+</apex:page>

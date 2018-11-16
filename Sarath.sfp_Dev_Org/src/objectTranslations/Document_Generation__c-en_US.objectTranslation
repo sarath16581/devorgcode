@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Forms</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Forms</value>
+    </caseValues>
+    <fields>
+        <help><!-- Field will store the account number populated from opportunity --></help>
+        <label><!-- Account Number --></label>
+        <name>Account_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Address --></label>
+        <name>Address__c</name>
+    </fields>
+    <fields>
+        <label><!-- Authorised Signatory Name --></label>
+        <name>Authorised_Signatory_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Business Activity --></label>
+        <name>Business_Activity__c</name>
+    </fields>
+    <fields>
+        <label><!-- Con Name --></label>
+        <name>Con_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Current Employees --></label>
+        <name>Current_Employees__c</name>
+    </fields>
+    <fields>
+        <help><!-- This field will hold the customer email --></help>
+        <label><!-- Customer Email --></label>
+        <name>Customer_Email__c</name>
+    </fields>
+    <fields>
+        <help><!-- This field will store the Customer fax --></help>
+        <label><!-- Customer Fax --></label>
+        <name>Customer_Fax__c</name>
+    </fields>
+    <fields>
+        <help><!-- This field will hold the name of the customer --></help>
+        <label><!-- Customer Name --></label>
+        <name>Customer_Name__c</name>
+    </fields>
+    <fields>
+        <help><!-- This field will hold the value of the customer phone --></help>
+        <label><!-- Customer Phone --></label>
+        <name>Customer_Phone__c</name>
+    </fields>
+    <fields>
+        <label><!-- Entity Name --></label>
+        <name>Entity_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Entity type --></label>
+        <name>Entity_type__c</name>
+    </fields>
+    <fields>
+        <label><!-- Firm Type --></label>
+        <name>Firm_Type__c</name>
+        <picklistValues>
+            <masterLabel>Financial</masterLabel>
+            <translation><!-- Financial --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Non-Financial</masterLabel>
+            <translation><!-- Non-Financial --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Retail</masterLabel>
+            <translation><!-- Retail --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- General Partner --></label>
+        <name>General_Partner__c</name>
+    </fields>
+    <fields>
+        <label><!-- License Number --></label>
+        <name>License_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Limited Partner --></label>
+        <name>Limited_Partner__c</name>
+    </fields>
+    <fields>
+        <help><!-- This field will hold the opportunity value --></help>
+        <label><!-- Opportunity --></label>
+        <name>Opportunity__c</name>
+        <relationshipLabel><!-- Forms --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Portal User Email --></label>
+        <name>Portal_User_Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- Portal User First Name --></label>
+        <name>Portal_User_First_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Portal User Last Name --></label>
+        <name>Portal_User_Last_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Portal User Phone No --></label>
+        <name>Portal_User_Phone_No__c</name>
+    </fields>
+    <fields>
+        <label><!-- Rating Available --></label>
+        <name>Rating_Available__c</name>
+    </fields>
+    <fields>
+        <label><!-- Rating --></label>
+        <name>Rating__c</name>
+        <picklistValues>
+            <masterLabel>1</masterLabel>
+            <translation><!-- 1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2</masterLabel>
+            <translation><!-- 2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3</masterLabel>
+            <translation><!-- 3 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4</masterLabel>
+            <translation><!-- 4 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5</masterLabel>
+            <translation><!-- 5 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>Status__c</name>
+        <picklistValues>
+            <masterLabel>More Information required</masterLabel>
+            <translation><!-- More Information required --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not verified</masterLabel>
+            <translation><!-- Not verified --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Verified</masterLabel>
+            <translation><!-- Verified --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Trading Name --></label>
+        <name>Trading_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Ultimate beneficial owner --></label>
+        <name>Ultimate_beneficial_owner__c</name>
+    </fields>
+    <layouts>
+        <layout>Document Generation Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- DIFC Click --></label>
+        <name>DIFC_Click</name>
+    </quickActions>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

@@ -1,0 +1,148 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <!-- <ltng:require styles="{!$Resource.DIFC_CSS}"/>-->
+    <aura:attribute name="stp1" type="Boolean" default='false' />
+    <aura:attribute name="stp2" type="Boolean" default='true' />
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <body>
+        <header>
+            <div class="text-container">
+                <span>NEWSROOM</span>
+                <span>EVENTS</span>
+                <span>MAKE AN ENQUIRY</span>
+                <span>PUBLIC REGISTER</span>
+                <span>LOGOUT</span>
+            </div>
+        </header>
+        <div class="clear"/>
+        <div class="secondary-header">
+            <div class="left-container">
+                <img src="https://image.ibb.co/dcSWbT/dubai.png" alt="dubai" border="0">
+                </img>
+            </div>
+            <div class="right-container">
+                <div class="text-container">
+                    <span>ABOUT</span>
+                    <span>AREAS OF BUSINESS</span>
+                    <span>SETTING UP</span>
+                    <span>OPERATING</span>
+                    <span>PROPERTIES</span>
+                    <span>LAWS &amp; REGULATIONS</span>
+                    <span>COMMUNITY</span> 
+                </div>
+            </div>
+            
+            <div class="img-container">
+                <img src="https://image.ibb.co/ng2L38/search_icon.png" alt="search_icon" border="0">
+                </img>
+            </div>
+            <div class="clear"/>
+        </div>
+        <div class="clear"/>
+        <!--Step 1 Start-->
+        <aura:if isTrue="{!v.stp1}">
+        <div class="legend-container">
+            <div class="form-container">
+                <div class="title-name-container">INITIAL APPLICATION FORM</div>
+                <a href="" class="save-for-later">SAVE FOR LATER</a>
+            </div>
+            <div class="bar-container">
+                <img src="https://preview.ibb.co/jXx9wT/bar.png" alt="bar" border="0">
+                </img>
+            </div>
+            <div class="sub-text-container">STEP1: APPLICATION DETAILS</div>
+            <div class="clear"/><br/><br/>
+            <div class="main-container">
+                <div class="sub-fields-container">
+                    
+                    
+                    <div class="name-container">
+                        <p class="name-text">NAME</p>
+                            <input type="text" placeholder="First" id="first">
+                            </input>
+                            <input type="text" placeholder="Last" id="last">
+                            </input>
+                    </div>
+                    
+                    <div class="clear"/>
+                    <div class="email-container">
+                        <p class="email-text">EMAIL ADDRESS</p> 
+                        <input type="text" placeholder="email@emailaddress.com" id="email"/>
+                    </div>
+                    <div class="phone-container">
+                        <p class="phone-text">CONTACT NUMBER</p>  
+                        <input type="text" placeholder="+971" id="phone"/>
+                    </div>  
+                    <div class="address-container">
+                        <p class="address-text">ADDRESS</p>
+                        <div class="address-input-container">
+                            <input type="text" placeholder="Postcode" id="address">
+                            </input>
+                        </div>
+                        <button class="find-button">FIND</button> 
+                    </div>
+                    <!--<button class="continue">CONTINUE</button> -->
+                    <lightning:button variant="brand" label="CONTINUE" aura:id="continueButton" class="continue" onclick="{!c.Step2Action }"/>
+                </div>
+            </div>
+            <div class="contextual-help-container">
+            <p class="side2-text">CONTEXTUAL HELP</p>
+            <p class="sub-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco</p>
+        </div>
+            </div></aura:if>
+       <!--Step 1 End-->
+        <!--Step 2 Start-->
+        <aura:if isTrue="{!v.stp2}">
+        <div class="legend-container">
+            <div class="form-container">
+                <div class="title-name-container">INITIAL APPLICATION FORM</div>
+                <a href="" class="save-for-later">SAVE FOR LATER</a>
+            </div>
+            <div class="bar-container">
+                <img src="https://preview.ibb.co/jXx9wT/bar.png" alt="bar" border="0">
+                </img>
+            </div>
+            <div class="sub-text-container">STEP2: BUSINESS ACTIVITY</div>
+            <div class="clear"/><br/><br/>
+            <div class="main-container">
+                <div class="sub-fields-container">
+                    <div class="activity-container">
+                        <p class="email-text">ACTIVITIES</p> 
+                        <input type="text" placeholder="Please elaborate further on the activities that you plan to conduct" id="activity"/>
+                    </div>
+                    
+                    <div class="name-container">
+                        <p class="name-text">OFFICE SPACE REQUIREMENT &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; TOTAL EMPLOYEES TO HIRE (FULL TIME)</p>
+                            <input type="text" placeholder="sft" id="space">
+                            </input>
+                            <input type="text" placeholder="" id="emp">
+                            </input>
+                    </div>
+                    
+                    <div class="clear"/>
+                    
+                    <div class="phone-container">
+                        <p class="phone-text">PROPOSED COMPANY NAME 1</p>  
+                        <input type="text" placeholder="" id="phone"/>
+                    </div> 
+                    <div class="phone-container">
+                        <p class="phone-text">PROPOSED COMPANY NAME 2</p>  
+                        <input type="text" placeholder="" id="phone"/>
+                    </div> 
+                    <div class="phone-container">
+                        <p class="phone-text">PROPOSED COMPANY NAME 3</p>  
+                        <input type="text" placeholder="" id="phone"/>
+                    </div> 
+                    
+                    <button class="continue">SAVE&nbsp;&amp;&nbsp;CONTINUE</button>   
+                </div>
+            </div>
+            <div class="contextual-help-container">
+            <p class="side2-text">CONTEXTUAL HELP</p>
+            <p class="sub-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco</p>
+        </div>
+        </div>
+        </aura:if>
+        <!--Step 2 Ed-->
+        
+    </body>
+</aura:component>

@@ -1,0 +1,7 @@
+<apex:page standardController="UserRole">
+  <apex:pageBlock >
+    <apex:pageBlocksection title="Role Detail">
+      <apex:outputField value="{!UserRole.Name}"/>
+    </apex:pageBlocksection>
+  </apex:pageBlock>
+</apex:page>

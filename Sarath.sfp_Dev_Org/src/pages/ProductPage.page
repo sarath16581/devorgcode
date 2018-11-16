@@ -1,0 +1,16 @@
+<apex:page >
+  <apex:pageBlock >
+      
+          <apex:pageBlockSection >
+          <apex:outputLabel > Product Name</apex:outputLabel>
+              <apex:outputLabel > Vehicle Services Agreement (VSA)</apex:outputLabel>
+              <apex:outputLabel > Product Type</apex:outputLabel>
+              <apex:outputLabel > Retail </apex:outputLabel>
+              <apex:outputLabel > Product Code</apex:outputLabel>
+              <apex:outputLabel > 00001</apex:outputLabel>
+              <apex:outputLabel > Product Family</apex:outputLabel>
+              <apex:outputLabel > Vehicle</apex:outputLabel>
+          </apex:pageBlockSection>
+      
+  </apex:pageBlock>
+</apex:page>

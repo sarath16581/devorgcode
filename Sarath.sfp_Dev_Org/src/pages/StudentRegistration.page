@@ -1,0 +1,23 @@
+<apex:page controller="StudentRegistration" >
+    <apex:sectionHeader title="Student" subtitle="Student Data"/>
+    	<apex:form >
+    		<apex:pageBlock title="Student Registration Form">
+            	<apex:pageBlockButtons >
+                	<apex:commandButton value="Submit" action="{!submit}"/>
+                	<apex:commandButton value="Cancel" action="{!cancel}"/>
+            	</apex:pageBlockButtons>
+                	<apex:outputLabel value="Name"/>
+                	<apex:inputText value="{!name}"/> <br/><br/>
+                	<apex:outputLabel value="Age"/>
+                	<apex:inputText value="{!age}"/> <br/><br/>
+                    <apex:outputLabel value="Address"/>
+                	<apex:inputTextarea cols="40" rows="4" value="{!address}"/><br/><br/>
+                    <apex:outputLabel value="Roll Number"/>
+                	<apex:inputText value="{!rollNumber}"/><br/><br/>
+                	<apex:outputLabel value="Active"/>
+                	<apex:inputCheckbox value="{!flag}"/><br/><br/>
+                	<apex:outputLabel value="Password"/>
+                	<apex:inputSecret value="{!password}"/><br/><br/>
+           	</apex:pageBlock>
+        </apex:form>
+</apex:page>

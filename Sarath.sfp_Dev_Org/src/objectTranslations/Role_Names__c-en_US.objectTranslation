@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Role Names</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Role Names</value>
+    </caseValues>
+    <fields>
+        <label><!-- RoleName1 --></label>
+        <name>RoleName1__c</name>
+    </fields>
+    <fields>
+        <label><!-- RoleName2 --></label>
+        <name>RoleName2__c</name>
+    </fields>
+    <fields>
+        <label><!-- RoleName3 --></label>
+        <name>RoleName3__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

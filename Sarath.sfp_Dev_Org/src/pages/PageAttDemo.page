@@ -1,0 +1,3 @@
+<apex:page id="uigasdhg989" apiVersion="32" renderAs="" sidebar="false" showChat="false" setup="true" readOnly="true" wizard="false" applyBodyTag="true" applyHtmlTag="true" docType="html-4.01-strict" >
+    <br/><br/><br/><br/><br/><br/><br/><br/> This is a Page Attributes Demo
+</apex:page>
